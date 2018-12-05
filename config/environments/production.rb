@@ -1,4 +1,5 @@
 Rails.application.configure do
+  config.action_mailer_url_options = {host: 'nomster-annessa.herokuapp.com'}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
