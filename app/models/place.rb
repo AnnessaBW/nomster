@@ -3,4 +3,6 @@ class Place < ApplicationRecord
   validates :name, presence: true, length: {minimum: 3}
   validates :address, presence: true 
   validates :description, presence: true
+  geocoded_by :address
+  after_valdation :geocode
 end
