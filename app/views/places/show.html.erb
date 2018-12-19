@@ -79,6 +79,7 @@
   </button>
 </div>
 <br />
+
 <div class="clear"></div>
 
 <div class="row">
@@ -98,9 +99,8 @@
 <div class="clear"></div>
   
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-  <div class="modal" id="modal2"></div>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -128,13 +128,18 @@
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#modal2">
     Add a photo
   </button>
-
+</div>
+<br />
 
 <div class="clear"></div>
 
 <% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture.url %>
-  <%= photo.caption %>
+  <div class="polaroid">
+    <%= image_tag photo.picture.url %>
+      <div class="container">
+        <%= photo.caption %>
+      </div>
+    </div>
 <% end %>
 
 </div>
