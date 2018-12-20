@@ -1,5 +1,5 @@
 class NotificationMailer < ApplicationMailer
-  default from: no-reply@nomsterapp.com
+  default from: "no-reply@nomsterapp.com"
   
   def comment_added
     mail(to: "freindlyfire420@msn.com", 
