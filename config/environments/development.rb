@@ -1,4 +1,16 @@
 Rails.application.configure do
+  config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "example.com",
+      authentication: "plaim",
+      enable_startis_auto: true, 
+      user_name: ENV['nomsteremail@gmail.com']
+      password: ENV['PASSWORD']
+  }
+  
   config.action_mailer.default_url_options = { host: 'node25.codenvy.io:43729'}
   # Settings specified here will take precedence over those in config/application.rb.
 
