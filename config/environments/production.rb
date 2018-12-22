@@ -6,11 +6,11 @@ Rails.application.configure do
     authentication: :plain,
     user_name: ENV['SENDGRID_USERNAME'],
     password: ENV['SENDGRID_PASSWORD'],
-    domain: 'heroku.com',
+    domain: 'https://nomster-annessa.herokuapp.com',
     enable_starttls_auto: true
   }
 
-  config.action_mailer_url_options = {host: 'nomster-annessa.herokuapp.com'}
+  config.action_mailer_url_options = {host: 'https://nomster-annessa.herokuapp.com'}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
