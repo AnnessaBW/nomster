@@ -58,7 +58,13 @@
         </blockquote>
       </div>
     <% end %>
-  </div>  
+
+
+<% if place.photos.present? %>
+  <div class="polaroid">
+    <%= image_tag place.photos.last.picture.url %>
+      
+    </div>
+<% end %>
 </div>
 <% end %>
-
